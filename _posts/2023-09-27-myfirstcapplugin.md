@@ -89,9 +89,7 @@ The `@Sdm.Field` annotation denotes field-level relationships. Currently, only t
 
 The entity is annotated with `@cds.persistence.skip` as there’s no need to create it in the database.
 
-Moreover, it's possible to establish navigation as well. For instance, if a Purchase Order must have multiple attachments, just create the Attachments entity as `@Sdm.Entity` and establish associations as you would with a "normal" entity. The only difference here is that `$expand` won’t work since the table doesn’t exist in the database. So, navigation should be resolved through navigation, not expansion. In other words, you should use `PurchaseOrder('123')/attachments` instead of `PurchaseOrder('123')?$expand=attachments`. Alternatively, you can implement a custom handler
-
- to deal with `$expand`, as [described here](https://cap.cloud.sap/docs/guides/using-services#handle-navigations-across-local-and-remote-entities).
+Moreover, it's possible to establish navigation as well. For instance, if a Purchase Order must have multiple attachments, just create the Attachments entity as `@Sdm.Entity` and establish associations as you would with a "normal" entity. The only difference here is that `$expand` won’t work since the table doesn’t exist in the database. So, this should be resolved through *navigation*, not *expansion*. In other words, you should use `PurchaseOrder('123')/attachments` instead of `PurchaseOrder('123')?$expand=attachments`. Alternatively, you can implement a custom handler to deal with `$expand`, as [described here](https://cap.cloud.sap/docs/guides/using-services#handle-navigations-across-local-and-remote-entities).
 
 The plugin does have its limitations. For now, it doesn’t support versioned repositories, thumbnail generation, extensions, working with multiple repositories, dealing with directories, and a few other things. However, for 90% of cases, where the only requirement is attaching documents to a business process, it works very well.
 
