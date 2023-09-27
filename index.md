@@ -1,5 +1,3 @@
 ---
-title: Welcome to my blog
+title: Some Thoughts About Some Things 
 ---
-
-Something.
