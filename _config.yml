@@ -1,12 +1,10 @@
 title: random
 author: Vinícius Barrionuevo
-remote_theme: jekyll/minima@v3.0
-
-plugins:
-  - jekyll-remote-theme
+theme: minima
 
 minima:
-  skin: auto
+  skin: dark
+
   # Minima date format.
   # Refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this.
   #
