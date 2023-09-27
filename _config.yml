@@ -1,6 +1,9 @@
 title: random
 author: Vinícius Barrionuevo
-theme: minima
+remote_theme: jekyll/minima@v3.0
+
+plugins:
+  - jekyll-remote-theme
 
 minima:
   skin: auto
